@@ -1,12 +1,12 @@
 require "yochiyochi_sawaday/version"
 
-class EnglishGame
+module YochiyochiSawaday
 
   def self.hello
     puts "hello"
   end 
 
-  def self.start
+  def start
     @words = { "apple"=> "りんご", "dog"=> "犬", "book"=> "本", "milk"=> "牛乳", "library"=> "図書館" }
     @loop_count = 0
     @correct_count = 0
@@ -33,6 +33,7 @@ class EnglishGame
     else  
       puts "あなたの正解率は#{@correct_count*100/@loop_count}パーセントです"
     end   
-
   end 
+
+  module_function :hello,:start
 end   
